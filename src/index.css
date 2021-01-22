@@ -3,7 +3,60 @@
 @tailwind utilities;
 
 @layer base {
-  .white-text {
-    @apply text-white;
+  @font-face {
+    font-family: opensans;
+    src: url('./fonts/OpenSans-Regular.ttf');
+    font-weight: 400;
   }
+  @font-face {
+    font-family: opensans;
+    src: url('./fonts/OpenSans-SemiBold.ttf');
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: opensans;
+    src: url('./fonts/OpenSans-Bold.ttf');
+    font-weight: 700;
+  }
+
+  :root {
+    --green: #06b995;
+    --blue: #071b4d;
+    --dark-blue: #232a34;
+    --dark: #1a1a1a;
+
+    --primary: var(--green);
+    --primary-text: var(--dark);
+    --navbar-bg: var(--dark-blue);
+  }
+  body,
+  html {
+    font-family: opensans !important;
+    color: var(--dark);
+  }
+  p,
+  a,
+  span {
+    @apply text-base;
+  }
+}
+
+@layer components {
+  .navbar-main {
+    background: var(--navbar-bg);
+    @apply h-16 flex items-center px-4;
+  }
+  .btn {
+    @apply py-2 px-6 cursor-pointer transition-all font-semibold rounded-sm;
+  }
+  .btn-primary {
+    @apply text-white bg-green-600 hover:bg-green-500;
+  }
+
+  .searchbar {
+    @apply h-11 w-full max-w-screen-sm;
+  }
+}
+
+@layer utilities {
 }
