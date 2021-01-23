@@ -1,8 +1,22 @@
+import Explore from 'components/pages/explore/explore';
+import Home from 'components/pages/home/home';
+import Upload from 'components/pages/upload/upload';
+import { Route, Switch } from 'react-router-dom';
 function App() {
   return (
-    <div className="h-screen width-screen flex flex-row justify-center items-center">
-      <h1 className="text-5xl font-medium">Welcome to Suparshot.com</h1>
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/explore">
+          <Explore />
+        </Route>
+        <Route path="/upload">
+          <Upload />
+        </Route>
+      </Switch>
+    </>
   );
 }
 
