@@ -5,10 +5,11 @@ import SearchBar from './lib/searchbar';
 import MenuItem from './lib/menuItems';
 import { NavbarWrapper } from './lib/navbarContext';
 
-function Navbar() {
+function Navbar({ className = '' }) {
+  let style = `navbar-main fixed z-10 ${className}`;
   return (
     <NavbarWrapper>
-      <div className="navbar-main fixed z-10">
+      <div className={style}>
         <Brand />
 
         <SearchBar />
