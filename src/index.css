@@ -44,10 +44,10 @@
 @layer components {
   .navbar-main {
     background: var(--navbar-bg);
-    @apply h-16 flex items-center px-4;
+    @apply h-16 flex items-center px-4 w-full;
   }
   .btn {
-    @apply py-2 px-6 cursor-pointer transition-all font-semibold rounded-sm;
+    @apply py-2 px-6 cursor-pointer transition-all font-semibold rounded-sm outline-none focus:outline-none;
   }
   .btn-primary {
     @apply text-white bg-green-600 hover:bg-green-500;

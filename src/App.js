@@ -1,8 +1,21 @@
-import Home from 'components/home/home';
+import Explore from 'components/pages/explore/explore';
+import Home from 'components/pages/home/home';
+import Upload from 'components/pages/upload/upload';
+import { Route, Switch } from 'react-router-dom';
 function App() {
   return (
     <>
-      <Home />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/explore">
+          <Explore />
+        </Route>
+        <Route path="/upload">
+          <Upload />
+        </Route>
+      </Switch>
     </>
   );
 }

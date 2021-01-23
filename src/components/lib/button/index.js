@@ -8,11 +8,11 @@ function ButtonWrapper({ href = null, className, children }) {
   );
 }
 
-function Button({ children, ...props }) {
-  let className = 'btn btn-primary';
+function Button({ children, className = '', ...props }) {
+  let baseClass = 'btn btn-primary ' + className;
   return (
     <>
-      <ButtonWrapper className={className} children={children} {...props} />
+      <ButtonWrapper className={baseClass} children={children} {...props} />
     </>
   );
 }
