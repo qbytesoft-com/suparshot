@@ -1,4 +1,4 @@
-import Navbar from 'components/global/navbar';
+import Navbar from 'components/global/navbar/navbar';
 
 function Home() {
   return (

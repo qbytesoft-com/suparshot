@@ -35,8 +35,7 @@
     color: var(--dark);
   }
   p,
-  a,
-  span {
+  a {
     @apply text-base;
   }
 }
@@ -52,7 +51,10 @@
   .btn-primary {
     @apply text-white bg-green-600 hover:bg-green-500;
   }
-
+  .btn-light {
+    color: inherit;
+    @apply bg-transparent;
+  }
   .searchbar {
     @apply h-11 w-full max-w-screen-sm;
   }
