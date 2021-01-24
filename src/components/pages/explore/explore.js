@@ -1,4 +1,4 @@
-import Navbar from 'components/global/navbar/navbar';
+import Navbar from 'components/global/navbar';
 
 function Explore() {
   return (
