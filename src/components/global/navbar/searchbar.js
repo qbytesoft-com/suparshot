@@ -1,6 +1,6 @@
 import { Button } from 'components/lib';
 import { GoSearch } from 'react-icons/go';
-function SearchBar({ className }) {
+function SearchBar({ className = '' }) {
   let style = 'searchbar relative mr-5 overflow-hiddent ' + className;
   return (
     <div className={style}>
