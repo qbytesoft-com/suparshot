@@ -10,7 +10,7 @@ const HomeHero = () => {
         <img src={HeroBg} alt="hero main background" className="object-cover w-full h-full" />
       </div>
 
-      <div className="hero-text z-10">
+      <div className="hero-text">
         <h1 className="font-bold text-white text-4xl">
           The best free stock photos & videos shared by talented creators.
         </h1>

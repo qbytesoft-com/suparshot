@@ -16,7 +16,7 @@ function Home() {
       <Navbar className={navStyle} />
       <HomeHero />
       <div className="h-screen flex justify-center items-center text-2xl font-semibold">
-        <p className="my-16">Welcome to SuparShot</p>
+        <p>Welcome to SuparShot</p>
       </div>
     </>
   );
