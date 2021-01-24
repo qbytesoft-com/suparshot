@@ -1,6 +1,6 @@
-import Explore from 'components/pages/explore/explore';
-import Home from 'components/pages/home/home';
-import Upload from 'components/pages/upload/upload';
+import Explore from 'components/pages/explore';
+import Home from 'components/pages/home';
+import Upload from 'components/pages/upload';
 import { Route, Switch } from 'react-router-dom';
 function App() {
   return (
