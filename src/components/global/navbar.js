@@ -1,9 +1,9 @@
 import React from 'react';
-import MobileNavMenu from './lib/mobileMenu';
-import Brand from './lib/brand';
-import SearchBar from './lib/searchbar';
-import MenuItem from './lib/menuItems';
-import { NavbarWrapper } from './lib/navbarContext';
+import MobileNavMenu from './navbar/mobileMenu';
+import Brand from './navbar/brand';
+import SearchBar from './navbar/searchbar';
+import MenuItem from './navbar/menuItems';
+import { NavbarWrapper } from './navbar/navbarContext';
 
 function Navbar({ className = '' }) {
   let style = `navbar-main fixed z-10 ${className}`;
