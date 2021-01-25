@@ -1,4 +1,4 @@
-function ButtonWrapper({ href = null, className, children, onClick }) {
+function ButtonWrapper({ href = null, className, children, onClick = () => {} }) {
   return href ? (
     <a href={href} className={className} onClick={() => onClick()}>
       {children}
