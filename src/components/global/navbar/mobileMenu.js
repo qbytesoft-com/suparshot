@@ -4,7 +4,7 @@ import { useNavbarToggle } from './navbarContext';
 function MobileNavMenu() {
   let { navbarOpen } = useNavbarToggle();
   return navbarOpen ? (
-    <div className="navbar-main-mobile pt-20 h-screen w-screen bg-gray-900 px-5 fixed">
+    <div className="navbar-main-mobile pt-20 h-screen w-screen bg-gray-900 px-5 fixed z-20">
       <ul className="list-none h-auto">
         <li className="py-3">
           <Link to="/" className="text-gray-200 hover:text-white">

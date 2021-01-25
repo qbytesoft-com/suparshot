@@ -6,7 +6,7 @@ import MenuItem from './navbar/menuItems';
 import { NavbarWrapper } from './navbar/navbarContext';
 
 function Navbar({ className = '' }) {
-  let style = `navbar-main fixed z-10 ${className}`;
+  let style = `navbar-main fixed z-50 ${className}`;
   return (
     <NavbarWrapper>
       <div className={style}>
