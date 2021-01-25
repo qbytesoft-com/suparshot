@@ -64,8 +64,7 @@
     min-height: 500px;
     height: 100%;
     /* min-height: 380px; */
-    z-index: -1;
-    @apply bg-gray-100 px-4;
+    @apply bg-gray-100 px-4 z-0;
   }
   .hero-text {
     z-index: 1;
