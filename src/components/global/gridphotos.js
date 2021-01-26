@@ -5,7 +5,7 @@ function GridPhotos() {
   const photosRef = React.useRef();
 
   React.useEffect(() => {
-    var colc = new Colcade('.photos', {
+    var colc = new Colcade(photosRef.current, {
       columns: '.photos-col',
       items: '.photos-item',
     });

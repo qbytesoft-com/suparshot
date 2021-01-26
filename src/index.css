@@ -83,7 +83,7 @@
     @apply px-5;
   }
   .spr-home-container {
-    @apply px-4 md:px-8 2xl:container 2xl:mx-auto;
+    @apply px-4 md:px-8 2xl:container 2xl:mx-auto min-h-screen;
   }
   .photos {
     @apply flex;
