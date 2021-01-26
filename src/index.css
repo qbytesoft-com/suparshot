@@ -77,3 +77,28 @@
     @apply mr-1 text-gray-300;
   }
 }
+
+@layer utilities {
+  .spr-container {
+    @apply px-5;
+  }
+  .spr-home-container {
+    @apply px-4 md:px-8 2xl:container 2xl:mx-auto;
+  }
+  .photos {
+    @apply flex;
+  }
+  .photos-col {
+    @apply flex-1;
+    padding: 0 0.5em;
+  }
+  .photos-col:first-child {
+    @apply pl-0;
+  }
+  .photos-col:last-child {
+    @apply pr-0;
+  }
+  .photos-item img {
+    margin-bottom: 0.8em;
+  }
+}
