@@ -20,6 +20,10 @@ function Home() {
       <div className="spr-container spr-home-container pt-6">
         <TitleTabs />
         <GridPhotos />
+
+        <div className="h-screen flex justify-center items-center text-2xl font-semibold">
+          <p>Upload SuparShot</p>
+        </div>
       </div>
     </>
   );

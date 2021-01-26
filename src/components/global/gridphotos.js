@@ -2,6 +2,8 @@ import React from 'react';
 import Colcade from 'colcade';
 
 function GridPhotos() {
+  const photosRef = React.useRef();
+
   React.useEffect(() => {
     var colc = new Colcade('.photos', {
       columns: '.photos-col',
@@ -13,7 +15,7 @@ function GridPhotos() {
   });
 
   return (
-    <div className="photos">
+    <div className="photos" ref={photosRef}>
       <div className="photos-col block"></div>
       <div className="photos-col hidden md:block"></div>
       <div className="photos-col hidden 2xl:block"></div>
