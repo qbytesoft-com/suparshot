@@ -93,7 +93,7 @@
     padding: 0 0.5em;
   }
   .photos-col:first-child {
-    @apply pl-0;
+    @apply pl-0 pr-0 sm:pr-2;
   }
   .photos-col:last-child {
     @apply pr-0;
