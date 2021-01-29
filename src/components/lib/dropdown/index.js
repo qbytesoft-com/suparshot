@@ -6,7 +6,7 @@ function DropdownMenuButton({ className = '', children }) {
 }
 
 function DropDownMenuList({ className = '', children }) {
-  let style = 'bg-white outline-none pt-3 rounded-sm shadow ' + className;
+  let style = 'bg-white outline-none rounded-sm shadow ' + className;
   return <MenuList className={style}>{children}</MenuList>;
 }
 function DropDownMenuListItem({ children }) {

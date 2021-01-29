@@ -28,7 +28,7 @@ function MenuItem() {
           <DropdownMenuButton className="mr-8">
             <HiOutlineDotsHorizontal />
           </DropdownMenuButton>
-          <DropDownMenuList className="w-80 mt-5">
+          <DropDownMenuList className="w-80 mt-5 pt-3">
             <DropDownMenuListItem>
               <Link to="/login" className="hover:bg-gray-100 block px-3 py-2 text-gray-600">
                 Login
