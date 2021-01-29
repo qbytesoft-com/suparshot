@@ -76,6 +76,19 @@
   .suggestion a {
     @apply mr-1 text-gray-300;
   }
+  .photos-item:hover > .photo-items-action {
+    @apply block;
+  }
+  .photo-items-action {
+    @apply absolute bottom-2 left-0 right-0 h-14 hidden;
+  }
+  .photo-items-action .photo-item-action-bg {
+    @apply bg-gradient-to-t from-gray-900 to-transparent opacity-60 absolute w-full h-full left-0 top-0 z-0;
+  }
+  .photo-items-action-profile img {
+    @apply w-10 h-10 object-cover object-center;
+    border-radius: 50%;
+  }
 }
 
 @layer utilities {
@@ -98,7 +111,7 @@
   .photos-col:last-child {
     @apply pr-0;
   }
-  .photos-item img {
-    margin-bottom: 0.8em;
+  .photos-item {
+    @apply relative mb-3;
   }
 }

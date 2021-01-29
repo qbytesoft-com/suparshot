@@ -1,6 +1,7 @@
 import React from 'react';
 import Colcade from 'colcade';
 import { LazyImage } from 'components/lib';
+import PhotoItemsAction from './gridphotos/photoItemsAction';
 
 function GridPhotos({ photos }) {
   const photosRef = React.useRef();
@@ -25,7 +26,10 @@ function GridPhotos({ photos }) {
         ? photos.map((photo, index) => {
             return (
               <div className="photos-item" key={index}>
-                <LazyImage image={{ ...photo, index }} />
+                <a href="/">
+                  <LazyImage image={{ ...photo, index }} />
+                </a>
+                <PhotoItemsAction />
               </div>
             );
           })
