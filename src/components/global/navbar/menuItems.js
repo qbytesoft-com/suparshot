@@ -19,7 +19,7 @@ function MenuItem() {
         </Link>
       </li>
       <li className="hidden lg:block">
-        <Link to="/upload" className="mr-8">
+        <Link to="/join" className="mr-8">
           Upload
         </Link>
       </li>
@@ -36,7 +36,7 @@ function MenuItem() {
             </DropDownMenuListItem>
 
             <DropDownMenuListItem>
-              <Link to="/signup" className="hover:bg-gray-100 block px-3 py-2 text-gray-600">
+              <Link to="/join" className="hover:bg-gray-100 block px-3 py-2 text-gray-600">
                 Join
               </Link>
             </DropDownMenuListItem>
