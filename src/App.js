@@ -1,5 +1,6 @@
 import Explore from 'components/pages/explore';
 import Home from 'components/pages/home';
+import Login from 'components/pages/login';
 import Signup from 'components/pages/signup';
 import Upload from 'components/pages/upload';
 import { Route, Switch } from 'react-router-dom';
@@ -25,6 +26,9 @@ function Routes() {
       </Route>
       <Route path="/join">
         <Signup />
+      </Route>
+      <Route path="/login">
+        <Login />
       </Route>
     </Switch>
   );
