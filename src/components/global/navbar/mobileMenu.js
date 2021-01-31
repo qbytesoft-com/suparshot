@@ -34,7 +34,7 @@ function MobileNavMenu() {
           </Link>
         </li>
         <li className="py-3">
-          <Link to="/singup" className="text-gray-200 hover:text-white">
+          <Link to="/join" className="text-gray-200 hover:text-white">
             Singup
           </Link>
         </li>
