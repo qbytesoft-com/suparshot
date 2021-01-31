@@ -92,7 +92,7 @@ function MenuItem() {
         </Dropdown>
       </li>
       <li className="hidden md:block">
-        <Button>Join</Button>
+        <Button href="/join">Join</Button>
       </li>
       <li className="md:hidden">
         <Button variant="light" className="px-0 py-3" onClick={toggleNavbar}>

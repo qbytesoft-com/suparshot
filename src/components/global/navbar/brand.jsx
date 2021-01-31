@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-function Brand() {
+function Brand({ className = '' }) {
+  let style = `brand-name text-white font-bold text-2xl mr-5 ${className}`;
   return (
-    <Link to="/" className="brand-name text-white font-bold text-2xl mr-5">
+    <Link to="/" className={style}>
       sShot
     </Link>
   );

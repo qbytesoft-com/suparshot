@@ -89,6 +89,9 @@
     @apply w-10 h-10 object-cover object-center;
     border-radius: 50%;
   }
+  .input-field {
+    @apply w-full bg-gray-50 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500;
+  }
 }
 
 @layer utilities {

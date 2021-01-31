@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 function ButtonWrapper({ href = null, className, children, onClick = () => {} }) {
   return href ? (
-    <a href={href} className={className} onClick={() => onClick()}>
+    <Link to={href} className={className} onClick={() => onClick()}>
       {children}
-    </a>
+    </Link>
   ) : (
     <button className={className} onClick={() => onClick()}>
       {children}
