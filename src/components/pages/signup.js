@@ -14,7 +14,7 @@ function Signup() {
       </div>
 
       <div className="h-full px-4 md:w-6/12 mx-auto flex flex-col justify-center items-center text-center">
-        <h1 className="font-bold text-6xl text-gray-900 mb-8">SuparShot</h1>
+        <h1 className="font-bold text-5xl text-gray-900 mb-8">SuparShot</h1>
         <p className="font-light text-xl text-gray-600">
           Download free photos and videos powered by a community of photographers.
         </p>
