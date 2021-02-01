@@ -8,13 +8,26 @@ function ProfileTitleTabs() {
   return (
     <div className="flex justify-between mb-3">
       <div className="flex gap-4 profile-tab-links">
-        <NavLink exact to="/me" className="font-semibold text-sm text-gray-600">
+        <NavLink
+          exact
+          to="/me"
+          className="font-semibold text-sm text-gray-600"
+          activeClassName="text-blue-600 pb-2 border-b-2 border-blue-600"
+        >
           {photos?.length} Photos
         </NavLink>
-        <NavLink to="/me/collection" className="font-semibold text-sm text-gray-600">
+        <NavLink
+          to="/me/collection"
+          className="font-semibold text-sm text-gray-600"
+          activeClassName="text-blue-600 pb-2 border-b-2 border-blue-600"
+        >
           Collection
         </NavLink>
-        <NavLink to="/me/stats" className="font-semibold text-sm text-gray-600">
+        <NavLink
+          to="/me/stats"
+          className="font-semibold text-sm text-gray-600"
+          activeClassName="text-blue-600 pb-2 border-b-2 border-blue-600"
+        >
           Stats
         </NavLink>
       </div>

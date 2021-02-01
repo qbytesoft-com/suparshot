@@ -92,9 +92,6 @@
   .input-field {
     @apply w-full bg-gray-50 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500;
   }
-  .profile-tab-links .active {
-    @apply text-blue-600 pb-2 border-b-2 border-blue-600;
-  }
 }
 
 @layer utilities {
