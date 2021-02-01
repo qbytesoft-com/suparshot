@@ -2,12 +2,14 @@ import React from 'react';
 import { Dropdown, DropdownMenuButton, DropDownMenuList, DropDownMenuListItem } from 'components/lib';
 import { NavLink, Link } from 'react-router-dom';
 import { FaSortDown } from 'react-icons/fa';
+import { useProfileContext } from './ProfileContextProvider';
 function ProfileTitleTabs() {
+  let { photos } = useProfileContext();
   return (
     <div className="flex justify-between mb-3">
       <div className="flex gap-4 profile-tab-links">
         <NavLink exact to="/me" className="font-semibold text-sm text-gray-600">
-          1 Photos
+          {photos?.length} Photos
         </NavLink>
         <NavLink to="/me/collection" className="font-semibold text-sm text-gray-600">
           Collection
@@ -17,7 +19,7 @@ function ProfileTitleTabs() {
         </NavLink>
       </div>
 
-      <div className="flex gap-4">
+      <div className="hidden md:flex md:gap-4">
         <Dropdown>
           <DropdownMenuButton>
             <div className="flex items-center gap-4">

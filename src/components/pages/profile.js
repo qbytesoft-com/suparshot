@@ -16,7 +16,7 @@ function Profile() {
       <ProfileContextProvider>
         <div className="avoid-nav">
           <ProfileInfo />
-          <div className="min-h-screen w-full px-4">
+          <div className="min-h-screen w-full px-4 pt-4">
             <ProfileTitleTabs />
 
             <ProfileRoutes />
