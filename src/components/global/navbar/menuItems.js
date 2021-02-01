@@ -1,11 +1,30 @@
+import React from 'react';
 import { Button } from 'components/lib';
 import { Dropdown, DropdownMenuButton, DropDownMenuList, DropDownMenuListItem } from 'components/lib/dropdown';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { HiOutlineDotsHorizontal, HiMenu } from 'react-icons/hi';
+import { FaChevronDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { useNavbarToggle } from './navbarContext';
+import LoginMenu from './menuitems/LoginMenu';
+import LogoutMenu from './menuitems/LogoutMenu';
+import SocialMenu from './menuitems/SocialMenu';
+
+function ProfileDropDownButton() {
+  return (
+    <div className="flex items-center text-white">
+      <img
+        src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
+        alt="profile"
+        className="w-5 h-5 rounded-full mr-2 border-2 border-white"
+      />
+      <FaChevronDown size="0.8rem" />
+    </div>
+  );
+}
+
 function MenuItem() {
   let { toggleNavbar } = useNavbarToggle();
+  let [user, setUser] = React.useState(true);
   return (
     <ul className="navbar-main p-0 m-0 list-none flex ml-auto text-white w-auto">
       <li className="hidden lg:block">
@@ -26,20 +45,10 @@ function MenuItem() {
       <li className="hidden md:block">
         <Dropdown>
           <DropdownMenuButton className="mr-8">
-            <HiOutlineDotsHorizontal />
+            {user ? <ProfileDropDownButton /> : <HiOutlineDotsHorizontal />}
           </DropdownMenuButton>
           <DropDownMenuList className="w-80 mt-5 pt-3">
-            <DropDownMenuListItem>
-              <Link to="/login" className="hover:bg-gray-100 block px-3 py-2 text-gray-600">
-                Login
-              </Link>
-            </DropDownMenuListItem>
-
-            <DropDownMenuListItem>
-              <Link to="/join" className="hover:bg-gray-100 block px-3 py-2 text-gray-600">
-                Join
-              </Link>
-            </DropDownMenuListItem>
+            {user ? <LoginMenu /> : <LogoutMenu />}
 
             <DropDownMenuListItem>
               <Link to="/faq" className="hover:bg-gray-100 block px-3 py-2 text-gray-600">
@@ -53,41 +62,7 @@ function MenuItem() {
               </Link>
             </DropDownMenuListItem>
             <hr />
-
-            <ul className="list-none flex px-2">
-              <li className="w-full py-4">
-                <a
-                  href="/"
-                  className="flex justify-center hover:bg-gray-900 hover:text-white p-4 rounded-sm transition-all"
-                >
-                  <FaFacebookF />
-                </a>
-              </li>
-              <li className="w-full py-4">
-                <a
-                  href="/"
-                  className="flex justify-center hover:bg-gray-900 hover:text-white p-4 rounded-sm transition-all"
-                >
-                  <FaTwitter />
-                </a>
-              </li>
-              <li className="w-full py-4">
-                <a
-                  href="/"
-                  className="flex justify-center hover:bg-gray-900 hover:text-white p-4 rounded-sm transition-all"
-                >
-                  <FaInstagram />
-                </a>
-              </li>
-              <li className="w-full py-4">
-                <a
-                  href="/"
-                  className="flex justify-center hover:bg-gray-900 hover:text-white p-4 rounded-sm transition-all"
-                >
-                  <FaYoutube />
-                </a>
-              </li>
-            </ul>
+            <SocialMenu />
           </DropDownMenuList>
         </Dropdown>
       </li>
