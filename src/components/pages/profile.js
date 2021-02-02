@@ -36,7 +36,7 @@ function ProfileRoutes() {
       <Route exact path={path}>
         <ProfilePhotos />
       </Route>
-      <Route exact path={`${path}/collection`}>
+      <Route exact path={`${path}/collections`}>
         <ProfileCollection />
       </Route>
       <Route exact path={`${path}/stats`}>

@@ -17,11 +17,11 @@ function ProfileTitleTabs() {
           {photos?.length} Photos
         </NavLink>
         <NavLink
-          to="/me/collection"
+          to="/me/collections"
           className="font-semibold text-sm text-gray-600"
           activeClassName="text-blue-600 pb-2 border-b-2 border-blue-600"
         >
-          Collection
+          Collections
         </NavLink>
         <NavLink
           to="/me/stats"
