@@ -120,4 +120,7 @@
   .avoid-nav {
     @apply pt-16;
   }
+  .rounded-1\/2 {
+    border-radius: 50% !important;
+  }
 }
