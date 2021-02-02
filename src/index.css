@@ -117,4 +117,7 @@
   .photos-item {
     @apply relative mb-3;
   }
+  .avoid-nav {
+    @apply pt-16;
+  }
 }

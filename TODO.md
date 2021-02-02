@@ -1,11 +1,11 @@
 ## Page list:
 
-- Home []
+- Home [x]
 - Sign UP options
-- Sign UP []
+- Sign UP [x]
   - Contributor []
   - User []
-- Sign IN []
+- Sign IN [x]
 - Profile []
   - Edit Profile/Settings []
   - Your Collection []

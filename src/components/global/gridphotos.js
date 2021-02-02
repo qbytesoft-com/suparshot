@@ -3,8 +3,9 @@ import Colcade from 'colcade';
 import { LazyImage } from 'components/lib';
 import PhotoItemsAction from './gridphotos/photoItemsAction';
 
-function GridPhotos({ photos }) {
+function GridPhotos({ photos, className }) {
   const photosRef = React.useRef();
+  let style = `photos ${className}`;
 
   React.useEffect(() => {
     var colc = new Colcade(photosRef.current, {
@@ -17,7 +18,7 @@ function GridPhotos({ photos }) {
   });
 
   return (
-    <div className="photos" ref={photosRef}>
+    <div className={style} ref={photosRef}>
       <div className="photos-col block"></div>
       <div className="photos-col hidden md:block"></div>
       <div className="photos-col hidden 2xl:block"></div>
