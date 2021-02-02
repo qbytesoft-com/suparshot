@@ -63,10 +63,40 @@ function Settings() {
             </label>
             <input type="text" className="input-field mt-2 mb-4" id="location" />
 
-            <p className="text-base text-gray-900 font-bold">Password</p>
-            <Link to="/reset-password" className="text-sm underline">
-              Change Password
-            </Link>
+            <div className="mb-4">
+              <p className="text-base text-gray-900 font-bold mb-2">Email settings</p>
+
+              <label htmlFor="monthlyEmail" className="mb-4 block">
+                <input type="checkbox" id="monthlyEmail" />
+                <span className="ml-2 font-normal text-gray-900">
+                  Receive a monthly email with stats about your photos
+                </span>
+              </label>
+
+              <label htmlFor="photographerRelatedEmail" className="mb-4 block">
+                <input type="checkbox" id="photographerRelatedEmail" />
+                <span className="ml-2 font-normal text-gray-900">Receive photographer related news</span>
+              </label>
+
+              <label htmlFor="newMilestoneEmail" className="mb-4 block">
+                <input type="checkbox" id="newMilestoneEmail" />
+                <span className="ml-2 font-normal text-gray-900">Receive an email when reaching a new milestone</span>
+              </label>
+
+              <label htmlFor="newsEmail" className="mb-4 block">
+                <input type="checkbox" id="newsEmail" />
+                <span className="ml-2 font-normal text-gray-900">
+                  Receive a newsletter with the best photos on Pexels
+                </span>
+              </label>
+            </div>
+
+            <div className="mb-4">
+              <p className="text-base text-gray-900 font-bold mb-2">Password</p>
+              <Link to="/reset-password" className="text-sm underline">
+                Change Password
+              </Link>
+            </div>
 
             <Button className="font-light block mt-8" type="button">
               Update Profile
