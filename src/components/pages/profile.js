@@ -30,7 +30,6 @@ function Profile() {
 
 function ProfileRoutes() {
   const { path } = useRouteMatch();
-  console.log(path);
   return (
     <Switch>
       <Route exact path={path}>
