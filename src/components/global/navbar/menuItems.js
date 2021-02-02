@@ -11,11 +11,11 @@ import SocialMenu from './menuitems/SocialMenu';
 
 function ProfileDropDownButton() {
   return (
-    <div className="flex items-center text-white">
+    <div className="flex gap-2 items-center text-white w-10">
       <img
         src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
         alt="profile"
-        className="w-5 h-5 rounded-full mr-2 border-2 border-white"
+        className="w-5 h-5 rounded-1/2 border-2 border-white object-center object-cover"
       />
       <FaChevronDown size="0.8rem" />
     </div>

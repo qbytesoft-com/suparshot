@@ -30,13 +30,12 @@ function Profile() {
 
 function ProfileRoutes() {
   const { path } = useRouteMatch();
-  console.log(path);
   return (
     <Switch>
       <Route exact path={path}>
         <ProfilePhotos />
       </Route>
-      <Route exact path={`${path}/collection`}>
+      <Route exact path={`${path}/collections`}>
         <ProfileCollection />
       </Route>
       <Route exact path={`${path}/stats`}>
