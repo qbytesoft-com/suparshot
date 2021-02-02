@@ -20,7 +20,9 @@ function Login() {
           <input type="email" className="input-field mb-4" id="email" placeholder="Email" />
           <input type="password" className="input-field mb-4" id="pass" placeholder="Password" />
 
-          <Button className="w-full rounded-md">Login</Button>
+          <Button className="w-full rounded-md" type="submit">
+            Login
+          </Button>
         </form>
       </div>
     </div>

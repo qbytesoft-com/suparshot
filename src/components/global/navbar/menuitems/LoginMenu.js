@@ -14,6 +14,11 @@ function LoginMenu() {
         </Link>
       </DropDownMenuListItem>
       <DropDownMenuListItem>
+        <Link to="/settings" className="hover:bg-gray-100 block px-3 py-2 text-gray-600">
+          Settings
+        </Link>
+      </DropDownMenuListItem>
+      <DropDownMenuListItem>
         <Link to="/logout" className="hover:bg-gray-100 block px-3 py-2 text-gray-600">
           Logout
         </Link>

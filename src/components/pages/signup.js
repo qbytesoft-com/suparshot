@@ -27,7 +27,9 @@ function Signup() {
           <input type="email" className="input-field mb-4" id="email" placeholder="Email" />
           <input type="password" className="input-field mb-4" id="pass" placeholder="Password" />
 
-          <Button className="w-full rounded-md">Create New Account</Button>
+          <Button className="w-full rounded-md" type="submit">
+            Create New Account
+          </Button>
         </form>
       </div>
     </div>

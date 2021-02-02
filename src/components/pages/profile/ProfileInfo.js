@@ -12,7 +12,9 @@ function ProfileInfo() {
       <div className="flex flex-col gap-4">
         <div className="flex flex-col items-center md:flex-row md:items-start gap-4">
           <h1 className="font-bold text-4xl text-gray-900">Maruf Ahmed</h1>
-          <Button className="p-3 w-20 text-xs">Follow</Button>
+          <Button href="/settings" className="p-3 w-auto text-xs text-center">
+            Edit profile
+          </Button>
         </div>
         <div className="flex gap-6">
           <Link to="/me/stats" className="text-xs">
