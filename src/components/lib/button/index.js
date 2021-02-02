@@ -1,22 +1,22 @@
 import { Link } from 'react-router-dom';
-function ButtonWrapper({ href = null, className, children, onClick = () => {} }) {
+function ButtonWrapper({ href = null, type = 'button', className, children, onClick = () => {} }) {
   return href ? (
-    <Link to={href} className={className} onClick={() => onClick()}>
+    <Link to={href} className={className} onClick={() => onClick()} type={type}>
       {children}
     </Link>
   ) : (
-    <button className={className} onClick={() => onClick()}>
+    <button className={className} onClick={() => onClick()} type={type}>
       {children}
     </button>
   );
 }
 
-function Button({ variant = 'primary', children, className = '', onClick, ...props }) {
+function Button({ variant = 'primary', className = '', ...props }) {
   let btnType = variant === 'light' ? 'btn-light' : 'btn-primary';
   let baseClass = `btn ${btnType} ${className}`;
   return (
     <>
-      <ButtonWrapper className={baseClass} children={children} {...props} onClick={onClick} />
+      <ButtonWrapper className={baseClass} {...props} />
     </>
   );
 }

@@ -68,7 +68,9 @@ function Settings() {
               Change Password
             </Link>
 
-            <Button className="font-light block mt-8">Update Profile</Button>
+            <Button className="font-light block mt-8" type="button">
+              Update Profile
+            </Button>
           </form>
         </div>
       </div>
