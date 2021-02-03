@@ -24,6 +24,7 @@ function ProfileDropDownButton() {
 
 function MenuItem() {
   let { toggleNavbar } = useNavbarToggle();
+  // eslint-disable-next-line no-unused-vars
   let [user, setUser] = React.useState(true);
   return (
     <ul className="navbar-main p-0 m-0 list-none flex ml-auto text-white w-auto">

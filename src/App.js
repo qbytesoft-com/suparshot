@@ -1,3 +1,4 @@
+import ChangePassword from 'components/pages/changePassword';
 import Explore from 'components/pages/explore';
 import Home from 'components/pages/home';
 import Login from 'components/pages/login';
@@ -7,11 +8,7 @@ import Signup from 'components/pages/signup';
 import Upload from 'components/pages/upload';
 import { Route, Switch } from 'react-router-dom';
 function App() {
-  return (
-    <>
-      <Routes />
-    </>
-  );
+  return <Routes />;
 }
 
 function Routes() {
@@ -37,6 +34,9 @@ function Routes() {
       </Route>
       <Route path="/settings">
         <Settings />
+      </Route>
+      <Route path="/reset-password">
+        <ChangePassword />
       </Route>
     </Switch>
   );
