@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useNavbarToggle } from './navbarContext';
 function MobileNavMenu() {
   let { navbarOpen, toggleNavbar } = useNavbarToggle();
+  // eslint-disable-next-line no-unused-vars
   let [user, setUser] = React.useState(true);
   return navbarOpen ? (
     <div

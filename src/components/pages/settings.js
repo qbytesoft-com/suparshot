@@ -98,7 +98,7 @@ function Settings() {
               </Link>
             </div>
 
-            <Button className="font-light block mt-8" type="button">
+            <Button className="font-light block mt-8" type="submit">
               Update Profile
             </Button>
           </form>
