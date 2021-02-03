@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from 'components/global/navbar';
 import { Button } from 'components/lib';
-import { Link } from 'react-router-dom';
 import Footer from 'components/global/footer';
 
 function ChangePassword(props) {

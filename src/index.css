@@ -47,6 +47,9 @@
   .btn-primary {
     @apply text-white bg-green-600 hover:bg-green-500;
   }
+  .btn-primary:disabled {
+    @apply opacity-70 cursor-default;
+  }
   .btn-light {
     color: inherit;
     @apply bg-transparent;

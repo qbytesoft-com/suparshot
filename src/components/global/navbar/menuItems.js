@@ -39,7 +39,7 @@ function MenuItem() {
         </Link>
       </li>
       <li className="hidden lg:block">
-        <Link to="/join" className="mr-8">
+        <Link to="/upload" className="mr-8">
           Upload
         </Link>
       </li>
