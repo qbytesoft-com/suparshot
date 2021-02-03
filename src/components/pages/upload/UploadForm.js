@@ -18,7 +18,7 @@ function UploadForm() {
       <input type="file" id="uploadFile" className="hidden" onChange={selectItemHandle} />
       {/* Selected image preview */}
       {selectedItem && (
-        <div className="mt-10 flex gap-8">
+        <div className="mt-10 flex flex-col md:flex-row gap-8">
           <div className="w-full relative">
             <Button variant="light" className="absolute p-0 top-2 right-2 text-gray-200" onClick={clearSelectItem}>
               <MdClose size="1.5rem" />
