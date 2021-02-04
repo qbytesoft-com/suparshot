@@ -30,7 +30,7 @@ function GridPhotos({ photos, className }) {
                 <a href="/">
                   <LazyImage image={{ ...photo, index }} />
                 </a>
-                <PhotoItemsAction />
+                <PhotoItemsAction userinfo={photo} />
               </div>
             );
           })
