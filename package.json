@@ -5,6 +5,7 @@
   "dependencies": {
     "@craco/craco": "^6.0.0",
     "@n8tb1t/use-scroll-position": "^2.0.3",
+    "@reach/dialog": "^0.13.0",
     "@reach/menu-button": "^0.12.1",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@testing-library/jest-dom": "^5.11.4",
