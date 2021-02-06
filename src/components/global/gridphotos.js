@@ -33,7 +33,7 @@ function GridPhotos({ photos, className }) {
                 <Link
                   to={{
                     pathname: `/img/${index}`,
-                    state: { background: { isModal: true, ...location } },
+                    state: { background: location },
                   }}
                 >
                   <LazyImage image={{ ...photo, index }} />

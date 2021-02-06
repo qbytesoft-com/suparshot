@@ -2,7 +2,7 @@ import Navbar from 'components/global/navbar';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-function SingleImageView(props) {
+function SingleImageView() {
   const { id } = useParams();
   return (
     <>

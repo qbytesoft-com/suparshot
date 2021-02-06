@@ -10,16 +10,13 @@ import Signup from 'components/pages/signup';
 import SingleImageView from 'components/pages/SingleImageView';
 import Upload from 'components/pages/upload';
 import { Route, Switch, useLocation } from 'react-router-dom';
-function App() {
+function App(props) {
   return <Routes />;
 }
 
 function Routes() {
-  let location = useLocation();
-  console.log(location);
-  let background = location.state && location.state.background;
-  console.log(background);
-
+  const location = useLocation();
+  const background = location.state && location.state.background;
   return (
     <>
       <Switch location={background || location}>
