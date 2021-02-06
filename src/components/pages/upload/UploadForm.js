@@ -4,9 +4,10 @@ import { MdClose } from 'react-icons/md';
 import { useUploadContext } from './UploadContext';
 
 function UploadForm() {
-  const { selectedItem, selectItemHandle, clearSelectItem } = useUploadContext();
+  const { selectedItem, selectItemHandle, clearSelectItem, publish } = useUploadContext();
+  console.log(selectedItem);
   return (
-    <form className="mt-8">
+    <form className="mt-8" onSubmit={publish}>
       <label htmlFor="uploadFile">
         <div className="w-100 h-32 border-2 border-dashed border-green-400 bg-gray-100 flex items-center justify-center gap-4">
           <Button>

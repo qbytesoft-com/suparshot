@@ -2,6 +2,7 @@ import React from 'react';
 import Colcade from 'colcade';
 import { LazyImage } from 'components/lib';
 import PhotoItemsAction from './gridphotos/photoItemsAction';
+import { Link, useLocation } from 'react-router-dom';
 
 function GridPhotos({ photos, className }) {
   const photosRef = React.useRef();
@@ -17,6 +18,8 @@ function GridPhotos({ photos, className }) {
     };
   });
 
+  let location = useLocation();
+
   return (
     <div className={style} ref={photosRef}>
       <div className="photos-col block"></div>
@@ -27,10 +30,15 @@ function GridPhotos({ photos, className }) {
         ? photos.map((photo, index) => {
             return (
               <div className="photos-item" key={index}>
-                <a href="/">
+                <Link
+                  to={{
+                    pathname: `/img/${index}`,
+                    state: { background: location },
+                  }}
+                >
                   <LazyImage image={{ ...photo, index }} />
-                </a>
-                <PhotoItemsAction />
+                </Link>
+                <PhotoItemsAction userinfo={photo} />
               </div>
             );
           })

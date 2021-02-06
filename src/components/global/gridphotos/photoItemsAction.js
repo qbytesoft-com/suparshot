@@ -2,7 +2,7 @@ import React from 'react';
 import { HiDownload } from 'react-icons/hi';
 import { IoMdAddCircleOutline } from 'react-icons/io';
 import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
-function PhotoItemsAction(props) {
+function PhotoItemsAction({ userinfo }) {
   const [fav, setFav] = React.useState(false);
   const makeFav = () => setFav(!fav);
   return (
@@ -10,9 +10,9 @@ function PhotoItemsAction(props) {
       <div className="photo-item-action-bg"></div>
       <div className="flex justify-between">
         <div className="photo-items-action-profile flex justify-between items-center z-10">
-          <img src={`${process.env.PUBLIC_URL}/images/profile.jpg`} alt="Profile" />
+          <img src={`/${userinfo.profileUrl}`} alt="Profile" />
           <a href="/" className="text-white text-sm ml-2">
-            Maruf Ahmed
+            {userinfo.username}
           </a>
         </div>
 

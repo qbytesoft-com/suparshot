@@ -18,10 +18,17 @@ function useSelectItem() {
   };
 
   const clearSelectItem = () => setSelectedItem(null);
+
+  const publish = (e) => {
+    e.preventDefault();
+    console.log('Published');
+  };
+
   return {
     selectedItem,
     selectItemHandle,
     clearSelectItem,
+    publish,
   };
 }
 
