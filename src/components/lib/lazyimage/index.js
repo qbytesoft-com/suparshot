@@ -5,7 +5,7 @@ const LazyImage = ({ image }) => (
   <div>
     <LazyLoadImage
       alt={image.imgAlt}
-      src={image.imgurl}
+      src={`${process.env.PUBLIC_URL}/${image.imgurl}`}
       effect="blur"
       key={image.index}
       height="inherit"

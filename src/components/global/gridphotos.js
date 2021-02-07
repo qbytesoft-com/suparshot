@@ -4,7 +4,7 @@ import { LazyImage } from 'components/lib';
 import PhotoItemsAction from './gridphotos/photoItemsAction';
 import { Link, useLocation } from 'react-router-dom';
 
-function GridPhotos({ photos, className }) {
+function GridPhotos({ photos = [], className }) {
   const photosRef = React.useRef();
   let style = `photos ${className}`;
 
