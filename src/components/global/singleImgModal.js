@@ -1,6 +1,17 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import { Modal, ModalContents } from 'components/lib';
-import { useParams, useHistory } from 'react-router-dom';
+import { Modal, ModalDismissButton, Button, ModalOverLay, ModalContent } from 'components/lib';
+import { useParams, useHistory, Link } from 'react-router-dom';
+import { MdClose } from 'react-icons/md';
+
+import { IoMdAddCircleOutline, IoMdInformationCircle } from 'react-icons/io';
+import { GoVerified } from 'react-icons/go';
+import { BsFillEyeFill } from 'react-icons/bs';
+import { RiShareForwardFill } from 'react-icons/ri';
+import SingleImgModalHeader from './singleImgModal/SingleImgModalHeader';
+import GridPhotos from './gridphotos';
+import axios from 'axios';
+import SingleImgModalTags from './singleImgModal/SingleImgModalTags';
 
 function SingleImgModal(props) {
   const { id } = useParams();
@@ -8,12 +19,73 @@ function SingleImgModal(props) {
   const close = () => {
     history.goBack();
   };
+  // const [photos, setPhotos] = React.useState(null);
+  // React.useEffect(() => {
+  //   axios
+  //     .get(`${process.env.PUBLIC_URL}/fakedata.json`)
+  //     .then((res) => {
+  //       setPhotos(res.data.data);
+  //     })
+  //     .catch((err) => console.log(err.message));
+  // }, []);
 
   return (
     <Modal>
-      <ModalContents aria-label="Single image modal" isOpen={true} onDismiss={close}>
-        <p>Image id {id}</p>
-      </ModalContents>
+      <ModalOverLay style={{ background: 'rgba(0, 0, 0, 80%)' }} isOpen={true} onDismiss={close}>
+        <ModalContent aria-label="Single image modal" className="singleImageViewModal">
+          <ModalDismissButton>
+            <Button onClick={close} variant="light" className="absolute top-4 left-8">
+              <MdClose className="text-gray-200" size="2rem" />
+            </Button>
+          </ModalDismissButton>
+
+          <div>
+            <div className="flex flex-col">
+              <SingleImgModalHeader />
+              <div className="w-full mt-8">
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/houseInTheForest.jpg`}
+                  alt="house"
+                  className="w-8/12 object-contain mx-auto"
+                />
+              </div>
+            </div>
+            <div className="mt-4">
+              <div className="flex gap-3 justify-center">
+                <p className="text-gray-500 flex gap-2 items-center text-sm">
+                  <BsFillEyeFill /> 37.6M views
+                </p>
+                <p className="text-gray-500 flex gap-2 items-center text-sm">
+                  <GoVerified /> Free to use (CC0)
+                </p>
+              </div>
+              <div className="flex gap-3 justify-center mt-4">
+                <Button
+                  variant="light"
+                  className="border border-gray-300 text-gray-800 flex gap-2 items-center text-xs px-3 rounded-md hover:shadow"
+                >
+                  <RiShareForwardFill />
+                  <span>Share</span>
+                </Button>
+
+                <Button
+                  variant="light"
+                  className="border border-gray-300 text-gray-800 flex gap-2 items-center text-xs px-3 rounded-md hover:shadow"
+                >
+                  <IoMdInformationCircle />
+                  <span>Info</span>
+                </Button>
+              </div>
+            </div>
+
+            {/* <div className="mt-8">
+              <p className="text-gray-900 text-2xl font-semibold">Similar Photos</p>
+              <GridPhotos photos={photos} className="mt-4" />
+            </div> */}
+            <SingleImgModalTags />
+          </div>
+        </ModalContent>
+      </ModalOverLay>
     </Modal>
   );
 }

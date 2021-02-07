@@ -47,7 +47,7 @@
   .btn-primary {
     @apply text-white bg-green-600 hover:bg-green-500;
   }
-  .btn-primary:disabled {
+  .btn:disabled {
     @apply opacity-70 cursor-default;
   }
   .btn-light {
@@ -94,6 +94,19 @@
   }
   .input-field {
     @apply w-full bg-gray-50 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500;
+  }
+  .singleImgModalActionsBtn .active {
+    @apply bg-red-600 text-white !important;
+  }
+
+  [data-reach-popover] {
+    @apply z-50;
+  }
+  [data-reach-dialog-overlay] {
+    @apply z-40 relative;
+  }
+  .singleImageViewModal[data-reach-dialog-content] {
+    @apply w-10/12 rounded;
   }
 }
 
