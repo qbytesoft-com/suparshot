@@ -3,6 +3,7 @@ import { HiDownload, HiOutlineCheck } from 'react-icons/hi';
 import { AiTwotoneHeart } from 'react-icons/ai';
 import { BsFillEyeFill } from 'react-icons/bs';
 import { Button } from 'components/lib';
+import { Link } from 'react-router-dom';
 
 function SingleImgInfo({ isOpen, imgInfoToggle }) {
   return (
@@ -92,16 +93,19 @@ function SingleImgInfo({ isOpen, imgInfoToggle }) {
 
             <ul className="list-none mt-4">
               <li>
-                <p className="flex gap-1 items-center text-gray-900">
+                <p className="flex gap-1 items-center text-gray-500">
                   <HiOutlineCheck /> Free to use.
                 </p>
               </li>
               <li>
-                <p className="flex gap-1 items-center text-gray-900">
+                <p className="flex gap-1 items-center text-gray-500">
                   <HiOutlineCheck /> No attribution required.
                 </p>
               </li>
             </ul>
+            <Link to="/" className="underline block mt-4 text-gray-500">
+              Learn more about license
+            </Link>
           </div>
 
           <Button variant="light" className="bg-gray-200 font-light mx-auto w-full mt-4" onClick={imgInfoToggle}>
