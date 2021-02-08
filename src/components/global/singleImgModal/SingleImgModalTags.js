@@ -4,7 +4,7 @@ function SingleImgModalTags(props) {
   return (
     <div className="mt-8">
       <p className="text-gray-900 text-2xl font-semibold">Related Tags</p>
-      <div className="flex flex-wrap gap-3 mt-4">
+      <div className="flex gap-3 mt-4 overflow-x-auto pb-4">
         <Button href="/" variant="light" className="border border-gray-300 text-sm">
           Fog
         </Button>

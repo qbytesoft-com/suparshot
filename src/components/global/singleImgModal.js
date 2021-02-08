@@ -34,23 +34,23 @@ function SingleImgModal(props) {
       <ModalOverLay style={{ background: 'rgba(0, 0, 0, 80%)' }} isOpen={true} onDismiss={close}>
         <ModalContent aria-label="Single image modal" className="singleImageViewModal">
           <ModalDismissButton>
-            <Button onClick={close} variant="light" className="absolute top-4 left-8">
+            <Button onClick={close} variant="light" className="absolute top-8 left-0 md:left-8">
               <MdClose className="text-gray-200" size="2rem" />
             </Button>
           </ModalDismissButton>
 
           <div>
             <div className="flex flex-col">
-              <SingleImgModalHeader />
-              <div className="w-full mt-8">
+              <SingleImgModalHeader className="order-2 mt-8 md:mt-0 md:order-1" />
+              <div className="w-full order-1 md:mt-8 md:order-2">
                 <img
                   src={`${process.env.PUBLIC_URL}/images/houseInTheForest.jpg`}
                   alt="house"
-                  className="w-8/12 object-contain mx-auto"
+                  className="w-11/12 md:w-10/12 lg:w-8/12 object-contain mx-auto"
                 />
               </div>
             </div>
-            <div className="mt-4">
+            <div className="mt-8">
               <div className="flex gap-3 justify-center">
                 <p className="text-gray-500 flex gap-2 items-center text-sm">
                   <BsFillEyeFill /> 37.6M views

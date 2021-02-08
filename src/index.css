@@ -99,7 +99,7 @@
     @apply bg-red-600 text-white !important;
   }
   .singleImageViewModal {
-    @apply w-10/12 rounded !important;
+    @apply w-11/12 md:w-10/12 rounded !important;
   }
 }
 

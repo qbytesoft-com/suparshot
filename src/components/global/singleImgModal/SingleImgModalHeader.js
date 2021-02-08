@@ -5,21 +5,22 @@ import { Link } from 'react-router-dom';
 import { AiOutlineHeart, AiTwotoneHeart } from 'react-icons/ai';
 import { FaChevronDown } from 'react-icons/fa';
 
-function SingleImgModalHeader(props) {
+function SingleImgModalHeader({ className = '' }) {
   const [liked, setLiked] = React.useState(false);
   const toggleLike = () => setLiked(!liked);
   let active = liked ? 'active' : '';
-  let likeBtnStyle = 'border border-gray-300 text-sm hover:shadow btn gap-3 text-gray-900 ' + active;
+  let likeBtnStyle = 'border border-gray-300 text-sm hover:shadow btn gap-3 text-gray-900 w-full md:w-auto ' + active;
+  let SingleImgModalHeaderStyle = `w-100 flex flex-col md:flex-row justify-between ${className}`;
   return (
-    <div className="w-100 flex justify-between">
-      <div className="flex gap-3 items-center">
+    <div className={SingleImgModalHeaderStyle}>
+      <div className="flex gap-3 items-center order-2 mt-8 md:mt-0 md:order-1">
         <img
           src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
           alt="user"
           className="w-12 h-12 rounded-1/2 object-cover object-center"
         />
 
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-4">
           <div>
             <Link to="/me" className="text-base font-semibold text-gray-900">
               Maruf Ahmed
@@ -39,10 +40,10 @@ function SingleImgModalHeader(props) {
         </div>
       </div>
 
-      <div className="singleImgModalActionsBtn flex items-center gap-3">
+      <div className="singleImgModalActionsBtn flex flex-col sm:flex-row items-center gap-3 order-1 md:order-2">
         <Button variant="light" className={likeBtnStyle} onClick={toggleLike}>
           <AiOutlineHeart size="1.5rem" />
-          <span className="text-sm font-light">3000 Likes</span>
+          <span className="text-sm font-light block">3000 Likes</span>
         </Button>
 
         {/* <Button
@@ -54,8 +55,8 @@ function SingleImgModalHeader(props) {
                 </Button> */}
 
         <Dropdown>
-          <DropdownMenuButton>
-            <div className="bg-green-600 px-6 text-white btn gap-3">
+          <DropdownMenuButton className="w-full md:w-auto">
+            <div className="bg-green-600 px-6 text-white btn gap-3 w-full md:w-auto">
               <span>Free Download</span>
               <FaChevronDown size="0.8rem" />
             </div>
