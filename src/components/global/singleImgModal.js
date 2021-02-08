@@ -8,12 +8,17 @@ import { IoMdAddCircleOutline, IoMdInformationCircle } from 'react-icons/io';
 import { GoVerified } from 'react-icons/go';
 import { BsFillEyeFill } from 'react-icons/bs';
 import { RiShareForwardFill } from 'react-icons/ri';
+
 import SingleImgModalHeader from './singleImgModal/SingleImgModalHeader';
 import GridPhotos from './gridphotos';
 import axios from 'axios';
 import SingleImgModalTags from './singleImgModal/SingleImgModalTags';
+import SingleImgInfo from './singleImgModal/SingleImgInfo';
 
 function SingleImgModal(props) {
+  const [imgInfo, setImgInfo] = React.useState(false);
+  const imgInfoToggle = () => setImgInfo(!imgInfo);
+
   const { id } = useParams();
   let history = useHistory();
   const close = () => {
@@ -71,12 +76,15 @@ function SingleImgModal(props) {
                 <Button
                   variant="light"
                   className="border border-gray-300 text-gray-800 flex gap-2 items-center text-xs px-3 rounded-md hover:shadow h-8"
+                  onClick={imgInfoToggle}
                 >
                   <IoMdInformationCircle />
                   <span>Info</span>
                 </Button>
               </div>
             </div>
+
+            <SingleImgInfo isOpen={imgInfo} imgInfoToggle={imgInfoToggle} />
 
             {/* <div className="mt-8">
               <p className="text-gray-900 text-2xl font-semibold">Similar Photos</p>
