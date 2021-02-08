@@ -71,7 +71,7 @@ function MenuItem() {
         <Button href="/join">Join</Button>
       </li>
       <li className="md:hidden">
-        <Button variant="light" className="px-0 py-3" onClick={toggleNavbar}>
+        <Button variant="light" className="px-0" onClick={toggleNavbar}>
           <HiMenu />
         </Button>
       </li>

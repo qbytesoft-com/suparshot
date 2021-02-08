@@ -9,8 +9,7 @@ function SingleImgModalHeader(props) {
   const [liked, setLiked] = React.useState(false);
   const toggleLike = () => setLiked(!liked);
   let active = liked ? 'active' : '';
-  let likeBtnStyle =
-    'border border-gray-300 rounded py-0 px-4 text-sm hover:shadow flex gap-3 items-center text-gray-900 ' + active;
+  let likeBtnStyle = 'border border-gray-300 text-sm hover:shadow btn gap-3 text-gray-900 ' + active;
   return (
     <div className="w-100 flex justify-between">
       <div className="flex gap-3 items-center">
@@ -20,7 +19,7 @@ function SingleImgModalHeader(props) {
           className="w-12 h-12 rounded-1/2 object-cover object-center"
         />
 
-        <div className="flex gap-4">
+        <div className="flex items-center gap-4">
           <div>
             <Link to="/me" className="text-base font-semibold text-gray-900">
               Maruf Ahmed
@@ -29,18 +28,18 @@ function SingleImgModalHeader(props) {
           </div>
 
           <div className="flex gap-3">
-            <Button variant="light" className="border border-gray-300 rounded py-0 px-2 text-sm hover:shadow">
+            <Button variant="light" className="border border-gray-300 rounded h-8 px-2 text-sm hover:shadow">
               Follow
             </Button>
 
-            <Button variant="light" className="border border-gray-300 rounded py-0 px-2 text-sm hover:shadow">
+            <Button variant="light" className="border border-gray-300 rounded h-8 px-2 text-sm hover:shadow">
               Donate
             </Button>
           </div>
         </div>
       </div>
 
-      <div className="singleImgModalActionsBtn flex gap-3">
+      <div className="singleImgModalActionsBtn flex items-center gap-3">
         <Button variant="light" className={likeBtnStyle} onClick={toggleLike}>
           <AiOutlineHeart size="1.5rem" />
           <span className="text-sm font-light">3000 Likes</span>
@@ -56,7 +55,7 @@ function SingleImgModalHeader(props) {
 
         <Dropdown>
           <DropdownMenuButton>
-            <div className="bg-green-600 px-6 text-white flex gap-3 items-center py-3 font-light rounded">
+            <div className="bg-green-600 px-6 text-white btn gap-3">
               <span>Free Download</span>
               <FaChevronDown size="0.8rem" />
             </div>

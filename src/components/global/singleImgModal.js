@@ -62,7 +62,7 @@ function SingleImgModal(props) {
               <div className="flex gap-3 justify-center mt-4">
                 <Button
                   variant="light"
-                  className="border border-gray-300 text-gray-800 flex gap-2 items-center text-xs px-3 rounded-md hover:shadow"
+                  className="border border-gray-300 text-gray-800 flex gap-2 items-center text-xs px-3 rounded-md hover:shadow h-8"
                 >
                   <RiShareForwardFill />
                   <span>Share</span>
@@ -70,7 +70,7 @@ function SingleImgModal(props) {
 
                 <Button
                   variant="light"
-                  className="border border-gray-300 text-gray-800 flex gap-2 items-center text-xs px-3 rounded-md hover:shadow"
+                  className="border border-gray-300 text-gray-800 flex gap-2 items-center text-xs px-3 rounded-md hover:shadow h-8"
                 >
                   <IoMdInformationCircle />
                   <span>Info</span>

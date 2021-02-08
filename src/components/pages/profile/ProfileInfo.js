@@ -10,9 +10,9 @@ function ProfileInfo() {
         className="w-32 h-32 rounded-full object-cover object-center"
       />
       <div className="flex flex-col gap-4">
-        <div className="flex flex-col items-center md:flex-row md:items-start gap-4">
+        <div className="flex flex-col items-center md:flex-row md:items-center gap-4">
           <h1 className="font-bold text-4xl text-gray-900">Maruf Ahmed</h1>
-          <Button href="/settings" className="p-3 w-auto text-xs text-center">
+          <Button href="/settings" className="h-8 w-auto text-xs text-center">
             Edit profile
           </Button>
         </div>
