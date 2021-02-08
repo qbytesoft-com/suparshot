@@ -20,7 +20,7 @@ function Settings() {
                 className="w-16 h-16 rounded-full object-cover object-center"
               />
 
-              <Button className="py-1 px-3">
+              <Button className="h-8 px-3">
                 <label htmlFor="chooseAvatar" className="text-sm">
                   Choose file
                 </label>

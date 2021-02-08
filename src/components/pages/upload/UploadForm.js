@@ -56,7 +56,7 @@ function UploadForm() {
         </div>
       )}
 
-      <div className="fixed bottom-0 left-0 right-0 w-full border-t border-gray-300 py-4 text-center bg-white z-10">
+      <div className="fixed bottom-0 left-0 right-0 w-full border-t border-gray-300 py-4 text-center bg-white z-10 flex justify-center items-center">
         <Button type="submit">Publish</Button>
       </div>
     </form>
