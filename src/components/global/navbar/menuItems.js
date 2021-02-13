@@ -68,7 +68,7 @@ function MenuItem() {
         </Dropdown>
       </li>
       <li className="hidden md:block">
-        <Button href="/join">Join</Button>
+        <Button href="/joinas">Join</Button>
       </li>
       <li className="md:hidden">
         <Button variant="light" className="px-0" onClick={toggleNavbar}>
