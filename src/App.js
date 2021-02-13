@@ -10,6 +10,7 @@ import Signup from 'components/pages/signup';
 import SingleImageView from 'components/pages/SingleImageView';
 import Upload from 'components/pages/upload';
 import { Route, Switch, useLocation } from 'react-router-dom';
+import JoinAs from 'components/pages/JoinAs';
 function App(props) {
   return <Routes />;
 }
@@ -29,7 +30,10 @@ function Routes() {
         <Route path="/upload">
           <Upload />
         </Route>
-        <Route path="/join">
+        <Route path="/join/downloader">
+          <Signup />
+        </Route>
+        <Route path="/join/contributor">
           <Signup />
         </Route>
         <Route path="/login">
@@ -46,6 +50,9 @@ function Routes() {
         </Route>
         <Route path="/img/:id">
           <SingleImageView />
+        </Route>
+        <Route path="/joinas">
+          <JoinAs />
         </Route>
       </Switch>
       {background && <Route path="/img/:id" children={<SingleImgModal />} />}

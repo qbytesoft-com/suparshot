@@ -9,7 +9,7 @@ function Login() {
         <Brand className="text-gray-900" />
         <div className="flex gap-4 items-center">
           <p className="text-gray-500 hidden sm:block">New to suparshot?</p>
-          <Button href="/join">Join</Button>
+          <Button href="/joinas">Join</Button>
         </div>
       </div>
 
