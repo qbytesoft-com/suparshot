@@ -8,7 +8,7 @@ function MobileNavMenu() {
   let [user, setUser] = React.useState(true);
   return navbarOpen ? (
     <div
-      className="navbar-main-mobile pt-20 h-screen w-screen bg-gray-900 px-5 fixed z-20"
+      className="navbar-main-mobile pt-20 h-screen w-screen bg-gray-900 px-5 fixed z-10"
       onClick={() => toggleNavbar()}
     >
       <ul className="list-none h-auto">
